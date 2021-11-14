@@ -41,8 +41,8 @@ class OrderService
      */
     public function updateValidator($data)
     {
-
-        //todo if product_id is specified, quantity is required
+        //if product_id is specified, quantity is required
+        //if quantity is specified, product_id is required
         $rules = [
             'address.first_name'    => 'sometimes|required|string',
             'address.last_name'     => 'sometimes|required|string',
@@ -52,8 +52,8 @@ class OrderService
             'address.city'          => 'sometimes|required|string',
             'address.zipcode'       => 'sometimes|required|string',
             'address.country'       => 'sometimes|required|string',
-            'products.*.product_id' => 'sometimes|required|integer|exists:products,id',
-            'products.*.quantity'   => 'sometimes|required|integer',
+            'products.*.product_id' => 'required_with:products.*.quantity|integer|exists:products,id',
+            'products.*.quantity'   => 'required_with:products.*.product_id',
         ];
 
         return Validator::make($data, $rules);
