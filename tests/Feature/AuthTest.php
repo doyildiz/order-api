@@ -35,8 +35,8 @@ class AuthTest extends TestCase
         ]);
 
         $response_failed = $this->call('POST', '/api/login', [
-            'email'    => 'dogu.yildiz@hotmail.com',
-            'password' => '12376454'
+            'email'    => $user->email,
+            'password' => $user->email.'-test'
         ]);
 
         $this->assertEquals(200, $response_correct->getStatusCode());
