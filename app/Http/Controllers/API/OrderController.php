@@ -66,7 +66,7 @@ class OrderController extends Controller
                 ], $address);
 
                 return response()->json(
-                    new OrderResource($order), 200
+                    new OrderResource($order), 201
                 );
             }
         } catch (\Exception $exception) {
