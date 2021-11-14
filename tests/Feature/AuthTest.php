@@ -28,9 +28,10 @@ class AuthTest extends TestCase
      */
     public function test_log_in_to_system()
     {
+        $user             = User::factory()->create();
         $response_correct = $this->call('POST', '/api/login', [
-            'email'    => 'dogu.yildiz@hotmail.com',
-            'password' => '12345678'
+            'email'    => $user->email,
+            'password' => $user->email
         ]);
 
         $response_failed = $this->call('POST', '/api/login', [

@@ -40,7 +40,7 @@ class OrderTest extends TestCase
             ]
         ]);
 
-        $this->assertEquals(200, $response->getStatusCode());
+        $this->assertEquals(201, $response->getStatusCode());
         $response->assertJsonStructure([
             'id',
             'customer_id',
