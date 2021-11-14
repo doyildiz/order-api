@@ -118,7 +118,8 @@ APP_URL/api/orders:id? (GET)  :
         
        Sample response: 
         
-        {
+        
+         {
             "data": [
                 {
                     "id": 1,
