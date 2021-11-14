@@ -102,10 +102,6 @@ class OrderController extends Controller
 
         if (array_key_exists('products', $data) && count($data['products'])) {
 
-            if (!$this->orderService->fieldCheck($data['products'])) {
-                return response()->json(['message' => 'Missing parameter'], 400);
-            }
-
             if (!$this->orderService->inventoryCheck($data['products'])) {
                 return response()->json(['message' => 'Not enough items'], 400);
             }
