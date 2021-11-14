@@ -38,7 +38,6 @@ APP_URL/api/login (POST)  :
    - If you want to log in to system by using 3 users created with seeder, you need to fill password
     field with user's email.
       
-        
       
         {
             email: "roel47@example.org",
@@ -66,16 +65,14 @@ APP_URL/api/logout (POST)  :
    - Bearer token should be set in the Authorization section.
     
     
-     Authorization: Bearer 907c762e069589c2cd2a229cdae7b8778caa9f07
+        Authorization: Bearer 907c762e069589c2cd2a229cdae7b8778caa9f07
      
      
+        Sample response:
      
-     
-     Sample response:
-     
-        {
-             "message": "You have successfully logged out and the token was successfully deleted"
-        }
+         {
+                "message": "You have successfully logged out and the token was successfully deleted"
+         }
 
 -- Product --
 
