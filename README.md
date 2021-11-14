@@ -2,16 +2,19 @@
 2) create a file named '.env' and copy .env.example file and paste it .env
 3) rename "APP_NAME" and run "php artisan key:generate" command
 4) make sure to set DB settings in .env file and run "php artisan migrate" to create tables
-5) run "php artisan db:seed" to create dummy products
+5) run "php artisan db:seed" to create dummy products and users
 6) run "php artisan serve" command to execute the project
 
 -- Authentication --
-- There are three endpoint in this section.
+- There are three endpoints in this section.
 
 APP_URL/api/register (POST)  :  
-    - There are already 3 users created in the system by using seeder.
-    - If you want to create a new user, you're able use this endpoint.
-    - This endpoint accepts 3 parameters: name, email, password
+  
+   - There are already 3 users created in the system by using seeder.
+   
+   - If you want to create a new user, you're able use this endpoint.
+   
+   - This endpoint accepts 3 parameters: name, email, password
     
     Sample response:
       
