@@ -1,0 +1,378 @@
+{
+	"info": {
+		"_postman_id": "095c4059-1fe5-4e2e-b466-a7bcfcefbff6",
+		"name": "Example-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/register?name=Dogu&email=dogu@hotmail.com&password=12345678",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Dogu"
+								},
+								{
+									"key": "email",
+									"value": "dogu@hotmail.com"
+								},
+								{
+									"key": "password",
+									"value": "12345678"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/login?email=roel47@example.org&password=roel47@example.org",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "roel47@example.org"
+								},
+								{
+									"key": "password",
+									"value": "roel47@example.org"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|htfCioTAAjDtySIZMYBUh7N9IVywF4LJaUC14wSq",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|4rW7HglKlb0HNAmm9IXc6F4FwXMvz3hoF8wG7BTq",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products?page=1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|4rW7HglKlb0HNAmm9IXc6F4FwXMvz3hoF8wG7BTq",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/order?address[first_name]=cansu&address[last_name]=yildiz&address[email]=cansu@hotmail.com&address[phone]=11111111&address[address]=test&address[city]=izmir&address[zipcode]=33133&address[country]=türkiye&products[0][product_id]=1&products[0][quantity]=6&address[test]=test",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"order"
+							],
+							"query": [
+								{
+									"key": "address[first_name]",
+									"value": "cansu"
+								},
+								{
+									"key": "address[last_name]",
+									"value": "yildiz"
+								},
+								{
+									"key": "address[email]",
+									"value": "cansu@hotmail.com"
+								},
+								{
+									"key": "address[phone]",
+									"value": "11111111"
+								},
+								{
+									"key": "address[address]",
+									"value": "test"
+								},
+								{
+									"key": "address[city]",
+									"value": "izmir"
+								},
+								{
+									"key": "address[zipcode]",
+									"value": "33133"
+								},
+								{
+									"key": "address[country]",
+									"value": "türkiye"
+								},
+								{
+									"key": "products[0][product_id]",
+									"value": "1"
+								},
+								{
+									"key": "products[0][quantity]",
+									"value": "6"
+								},
+								{
+									"key": "products[1][quantity]",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "address[test]",
+									"value": "test"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|4rW7HglKlb0HNAmm9IXc6F4FwXMvz3hoF8wG7BTq",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/orders/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"orders",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|4rW7HglKlb0HNAmm9IXc6F4FwXMvz3hoF8wG7BTq",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/order/1?products[0][product_id]=5&products[0][quantity]=1&address[first_name]=seval",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"order",
+								"1"
+							],
+							"query": [
+								{
+									"key": "products[0][product_id]",
+									"value": "5"
+								},
+								{
+									"key": "products[0][quantity]",
+									"value": "1"
+								},
+								{
+									"key": "address[first_name]",
+									"value": "seval"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
