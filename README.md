@@ -39,12 +39,15 @@ APP_URL/api/login (POST)  :
     field with user's email.
       
         
+      
         {
             email: "roel47@example.org",
             password: "roel47@example.org"
         }
     
    - This endpoint accepts 2 parameters: email, password
+    
+    
     
     Sample response:
        
@@ -65,6 +68,9 @@ APP_URL/api/logout (POST)  :
     
      Authorization: Bearer 907c762e069589c2cd2a229cdae7b8778caa9f07
      
+     
+     
+     
      Sample response:
      
         {
@@ -80,6 +86,7 @@ APP_URL/api/products (GET)  :
 
    - Bearer token should be set in the Authorization section.
        
+    
     Authorization: Bearer 907c762e069589c2cd2a229cdae7b8778caa9f07
     
     
@@ -90,6 +97,7 @@ APP_URL/api/products (GET)  :
         
      Sample response:
      
+      
         [
             {
                 "id": 1,
