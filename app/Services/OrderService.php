@@ -42,7 +42,7 @@ class OrderService
     public function updateValidator($data)
     {
         //if product_id is specified, quantity is required
-        //if quantity is specified, product_id is required
+        //if products array is specified, product_id is required
         $rules = [
             'address.first_name'    => 'sometimes|required|string',
             'address.last_name'     => 'sometimes|required|string',
@@ -52,7 +52,7 @@ class OrderService
             'address.city'          => 'sometimes|required|string',
             'address.zipcode'       => 'sometimes|required|string',
             'address.country'       => 'sometimes|required|string',
-            'products.*.product_id' => 'required_with:products.*.quantity|integer|exists:products,id',
+            'products.*.product_id' => 'required_with:products|integer|exists:products,id',
             'products.*.quantity'   => 'required_with:products.*.product_id',
         ];
 
