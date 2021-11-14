@@ -38,6 +38,7 @@ APP_URL/api/login (POST)  :
    - If you want to log in to system by using 3 users created with seeder, you need to fill password
     field with user's email.
       
+        
         {
             email: "roel47@example.org",
             password: "roel47@example.org"
@@ -116,6 +117,7 @@ APP_URL/api/orders:id? (GET)  :
     (APP_URL/api/orders/1)
 
         
+      
        Sample response: 
         
         
